@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Rubik+Vinyl&display=swap');
+
+
+:root{
+    --primary-color: #28292d;
+}
+
+._grey_mode{
+    --primary-color: black;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    background: var(--primary-color);
+    color: white;
+}
+
+._box-container{
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    /* background: red; */
+}
+
+._align-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+._align-center{
+    display: flex;
+    flex-direction: row;  /*Change this in media queries row*/
+    justify-content: center;
+    align-items: center;
+}
+
+._box-left{
+    /* background: aqua; */
+    width: 100%;
+    height: 100%;
+}
+
+._box-right{
+    width: 100%;
+    height: 100%;
+    /* background: greenyellow; */
+}
+
+._box-small{
+    width: auto;
+    height: auto;
+    /* background: powderblue; */
+    padding-right:  80px;           /*CHANGE THIS IN MEDIA QUERIES*/
+    text-align: justify;            /*CHANGE THIS IN MEDIA QUERIES*/
+}
+
+
+/*################## PUZZLE CONTAINER */
+.child-box{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px; 
+    background: #28292d;
+    z-index: 10;
+    width: 322px;
+    height: 322px;
+}
+
+.box{
+    position: relative;
+    width: 326px;
+    height: 326px;
+    background: #28292d;
+    border-radius:  8px;
+    overflow: hidden;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, red, orange);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, green, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+/*################## PUZZLE CONTAINER */
+
+
+/*SIMPLE BUTTON DESIGN #################################################*/
+._simple-button {
+    border-radius: 5px;
+    /* background-color: #4CAF50; */
+    color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    font-size: 16px;
+}
+
+._button-blue {     
+    color: white; 
+    border: 1px solid #4285F4;    
+    background-color: #4285F4;
+}
+  
+._button-blue:hover {
+    background-color: white;
+    color: #4285F4;
+}
+
+._button-red {     
+    color: white; 
+    border: 1px solid #DB4437;    
+    background-color: #DB4437;
+}
+  
+._button-red:hover {
+    background-color: white;
+    color: #DB4437;
+}
+
+._button-green {     
+    color: white; 
+    border: 1px solid #0F9D58;    
+    background-color: #0F9D58;
+}
+  
+._button-green:hover {
+    background-color: white;
+    color: #0F9D58;
+}
+
+
+
+/*SIMPLE BUTTON DESIGN #################################################*/
+
+
+
+ 
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .screen-size {background: green;}
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .screen-size {background: blue;}
+} 
+  
+/* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .screen-size {background: orange;}
+} 
+  
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .screen-size {background: pink;}
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .screen-size {background: red;}
+    ._box-small {        
+        padding-right:  0px;    
+        text-align: center;
+        padding: 10px; 
+    }
+
+    ._align-center{
+        flex-direction: column;  /*Change this in media queries row*/
+    }
+
+    ._box-left{
+        text-align: center; 
+    }
+
+    ._box-container{
+        height: 100%;
+        padding-top: 50px;
+    }
+
+    .navbar {
+      font-size: 8px;
+      flex-wrap: wrap;
+    }
+
+    ._box-right {
+      padding-bottom: 25px;
+    }
+
+
+
+}
+
+
+.slidecontainer {
+    width: 80%;
+    /* background-color: gainsboro; */
+  }
+  
+  .slider {
+    /* -webkit-appearance: none; */
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    /* -webkit-transition: .2s; */
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  /* .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  } */
+
+
+.exp-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: goldenrod;
+    height: 100vh;
+}
+
+
+.exp-box{
+    height: 50px;
+    width: 500px;;
+
+}
+
+._red{
+    background-color: red;
+}
+
+._blue{
+    background-color: blue;
+}
+
+._br{
+    height: 15px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    /* bottom: 0px; */
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .1s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  ._puzzle {
+    font-family: 'Rubik Vinyl', cursive; 
+    color: #0F9D58;    
+  }
+
+._puzzle:hover{
+    /* font-family: 'Covered By Your Grace', cursive;     */
+    font-family: 'Rubik Vinyl', cursive; 
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+  }
+
+  ._puzzle:hover + .powered{
+    opacity: 1;
+    text-shadow: 5px 5px 3px white;
+    color: white;
+  }
+
+  .powered{
+    font-size: 10px;
+    opacity: 50%;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* background: #28292d; */
+    /* background: white; */
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .font-text{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: large;
+    letter-spacing: .1em; 
+  }
+  
+  .topLeft{
+    opacity: .2;
+    left: 0;
+  }
+
+  .topRight, topLeft{
+    font-size: small;
+    opacity: .1;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  .navbar {
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    font-size: 10px;
+    background: black;
+  }
+
+  .navbar a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: grey;
+    background: black;
+  }

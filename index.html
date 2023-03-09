@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Puzzle</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>    
+    <p class="topRight">Copyright © 2023</p>    
+    <p class="topLeft">Regin®™</p>
+    
+    <div class="_box-container _align-center">
+
+                <div class="_box-left _align-center">                    
+                    <div class="_align-column">
+
+                        <div class="slidecontainer">
+                            <p class="font-text">Adjust the puzzle tempo</p>
+                            <p id="speed"></p>
+                            <input type="range" min="1" max="20" value="3" id="tempo" name="tempo">    
+                            <label for="tempo"></label>                            
+                        </div>
+
+                        <div class="_br"></div>
+                        <div class="box">
+                            <div class="child-box">
+                            <canvas id="myCanvas"  width="320" height="320" style="border-radius: 15px;"></canvas>
+                            </div>                        
+                        </div>    
+                        <div class="_br"></div>
+
+                        <!-- button here -->
+                        <div>
+                            <button class="_simple-button  _button-red" onclick="_tester()">Shuffle Number's</button>
+                            <button class="_simple-button  _button-green" onclick="_pause()">Pause</button>
+                        </div>
+
+                        <div class="_br"></div>
+                        <!-- <p>I created a simple Algorithm to solve a sliding number puzzle</p>   
+                        <p class="screen-size">Screen Size</p> -->
+                    </div>
+                </div>
+
+                <div class="_box-right _align-center">
+                    <div class="_box-small">
+                            <h1 class="_puzzle">15 puzzle</h1>
+                            <p class="powered">Powered by: HTML CSS Javascript</p>
+                            <div class="_br"></div>               
+
+                            <p class="font-text">
+                                The 15 puzzle (also called Gem Puzzle, Boss Puzzle, Game of Fifteen, Mystic Square and many others) is a sliding puzzle having 15 square tiles numbered 1-15 in a frame that is 4 tiles high and 4 tiles wide, leaving one unoccupied tile position. Tiles in the same row or column of the open position can be moved by sliding them horizontally or vertically, respectively. The goal of the puzzle is to place the tiles in numerical order.
+                            </p>
+                            <div class="_br"></div>           
+                            <p class="font-text">
+                                I created a simple Algorithm to solve this puzzle I hope this serve as your guide in case you want to play 15 Puzzle.
+                            </p>
+                            <div class="_br"></div>                                       
+                            <!-- <button class="_simple-button  _button-blue" onclick="_colorCode()">Let's Play</button>                             -->
+                            <button class="_simple-button  _button-blue" onclick="window.location.href='http://calaguas.s3-website-us-east-1.amazonaws.com/'">Let's Play</a></button>                            
+
+                    </div>                    
+                </div>                   
+    </div>
+
+    <script src="./js/puzzle.js"></script>
+
+    
+        <div class="navbar">
+            <a href="#">Source ::</a>
+            <a href="https://www.w3schools.com/">w3schools</a>
+            <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+            <a href="https://stackoverflow.com">Stack Overflow</a>
+            <a href="https://beta.reactjs.org">React Docs Beta</a>
+            <a href="https://www.google.com">Google</a>
+            <a href="https://www.youtube.com">Youtube</a>
+            <a href="https://github.com">GitHub</a>
+            <a href="https://aws.amazon.com/">AWS</a>            
+            <a href="http://www.mayaman.s3-website.ca-central-1.amazonaws.com/">Random Quotes</a>
+        </div>      
+ 
+</body>
+
+</html>
+

@@ -164,28 +164,6 @@ if(_engine=="IGNITE"){
                                   
 }  
 
-
-       //Unique Random Array
-        // var numbersXYTemp=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-                                
-        // function shuffleNumbers(){
-        //     let myMax = numbersXYTemp.length;        
-        //     let myRadom;
-        //     let j=0;
-
-           
-        //     for(let i = 0;i <= myMax;i ++){
-        //         myRandom = Math.floor(Math.random()*myMax)
-        //         numbersXYTemp.push(numbersXYTemp[myRandom]);
-        //         numbersXYTemp.splice(myRandom,1); // 2nd parameter means remove one item only                     
-        //         myMax-=1;
-        //         i=0;                
-        //     }
-        //     for(let i=0;i<=15;i++){
-        //         _shuffle[i][2]=numbersXYTemp[i];
-        //     }                    
-        // }   
-
 function isAlign(_a,_b,_c,_d,_w,_x,_y,_z){  
     if((_numbers[_a][2]==_w) && (_numbers[_b][2]==_x) && (_numbers[_c][2]==_y) && (_numbers[_d][2]==_z)){
         return true;

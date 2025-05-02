@@ -87,7 +87,7 @@ function _getLocation(num,a,b){
         _xy[b]=_sl[0][1];
 }
 
-//Shuffle the numbers. not RANDOM if we generate random number there is a possibility the puzzle is impossible to solve
+//Shuffle the numbers. Do not generate them randomly, as there is a possibility the puzzle could become unsolvable.
 function _shuffle(){
 let _decision =  (max) => {
     return Math.floor(Math.random() * max);
